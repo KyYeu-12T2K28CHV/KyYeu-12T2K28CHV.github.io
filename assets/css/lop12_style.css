@@ -1,0 +1,43 @@
+.page1 {
+    width: 100%;
+    /* height: 400px; */
+}
+
+.page1 img {
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: contain; */
+}
+
+.fade-box {
+    position: relative;
+    display: inline-block;
+}
+
+.fade-box img {
+    width: 100%;
+    display: block;
+}
+
+.fade-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(to bottom, white, transparent 15%) top,
+        linear-gradient(to top, white, transparent 15%) bottom,
+        linear-gradient(to right, white, transparent 15%) left,
+        linear-gradient(to left, white, transparent 15%) right;
+
+    background-size: 100% 15%, 100% 15%, 15% 100%, 15% 100%;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-box:hover::after {
+    opacity: 1;
+}
