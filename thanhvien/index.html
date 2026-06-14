@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thành viên lớp</title>
-    <link rel="icon" href="../img/funcbut/logo.ico" type="image/x-icon">
+<html><head>
+<meta charset="utf-8">
+<title>Kỷ yếu</title>
+<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
 </head>
 <body>
-    <a href="../index.html">Quay về</a>
-    <a href="../lop10/index.html">Lớp 10</a>
-    <a href="../lop11/index.html">Lớp 11</a>
-    <a href="../lop12/index.html">Lớp 12</a>
-    <a href="../giaovien/index.html">Giáo viên</a>
-</body>
-</html>
+    
+    <div class="funt">
+        <button id="shuffleBtn"><img src="../img/funcbut/shuffle.png" alt="shuffle"></button>
+        <!-- <button id="backBtn"><img src="../img/funcbut/back.png" alt="shuffle"></button> -->
+        <a href="../index.html">
+            <img id="backBtn" src="../img/funcbut/back.png" alt="back">
+        </a>
+</div>
+<div id="board"></div>
+<div id="popup" class="hidden"><div class="box">
+<img id="pimg">
+    <div class="info-panel">
+        <h2 id="pname"></h2>
+        <!-- <p>Thông tin sẽ hiển thị tại đây.</p>
+        <button onclick="closePopup()">Đóng</button> -->
+    </div>
+</div></div>
+
+
+<script src="script.js"></script>
+</body></html>
