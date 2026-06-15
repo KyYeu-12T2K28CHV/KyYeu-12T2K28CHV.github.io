@@ -1,22 +1,34 @@
 const images = [ 
-    { file:"../img/fotoexhi/0.png", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/1.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/2.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/3.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/4.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/5.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/6.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/7.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/8.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/9.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/10.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/11.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/12.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/13.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/14.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/15.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
-    { file:"../img/fotoexhi/16.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." } 
-    // { file:"../img/fotoexhi/1.jpg", title:"Mây Trên Núi", date:"12/03/2026", info:"Bình minh tại Tà Xùa." }, 
+    { file:"../img/fotoexhi/1-1.jpg", title:"Đại hội Đoàn", date:"không/nhớ/2023", info:"" }, 
+    { file:"../img/fotoexhi/1-5.jpg", title:"20/11 2024", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/1-6.jpg", title:"Học sinh thanh lịch Hồng Anh - Trường", date:"20/11/2024", info:"" }, 
+    { file:"../img/fotoexhi/1-2.jpg", title:"Mùng 8/3 2024", date:"08/03/2024", info:"" }, 
+    { file:"../img/fotoexhi/1-4.jpg", title:"Đà Lạt 2023", date:"08/01/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-2.jpg", title:"Quốc tế Phụ nữ", date:"20/10/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-7.jpg", title:"Quốc tế Nam giới", date:"19/11/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-1.jpg", title:"Giai điệu tuổi hồng 2024", date:"20/11/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-4.jpg", title:"Học sinh thanh lịch Minh - Nga", date:"20/11/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-6.jpg", title:"20/11 2024", date:"20/011/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-5.jpg", title:"Đà Lạt 2024", date:"24/12/2025", info:"" }, 
+    { file:"../img/fotoexhi/2-3.jpg", title:"Ăn tất niên", date:"23/01/2025", info:"" }, 
+    { file:"../img/fotoexhi/2-9.jpg", title:"Giỗ tổ Hùng Vương", date:"05/04/2025", info:"" }, 
+    { file:"../img/fotoexhi/2-8.jpg", title:"Tổng kết năm học", date:"24/05/2025", info:"" }, 
+    { file:"../img/fotoexhi/2-10.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-1.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-2.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-3.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-4.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-5.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-6.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-7.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-8.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-9.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-10.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-11.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-12.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }, 
+    { file:"../img/fotoexhi/3-13.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" },
+    { file:"../img/fotoexhi/end.jpg", title:"Đại hội Đoàn", date:"12/03/2026", info:"" }
+
 ]; 
 
 const gallery = document.querySelector(".gallery"); 
@@ -25,12 +37,12 @@ const bg1 = document.querySelector(".bg1");
 const bg2 = document.querySelector(".bg2"); 
 const bg3 = document.querySelector(".bg3"); 
 const BACKGROUNDS = [ bg1, bg2, bg3 ]; 
-const GROUP_NAMES = [ "LỚP 10", "LỚP 11", "LỚP 12" ]; 
+const GROUP_NAMES = [ "10 11", "10 11", "11 12" ]; 
 let totalWidth = 0; 
 const BASE_HEIGHT = 480; 
 const SPACING = 300; 
 const MARGIN = 80; 
-const GROUP_SIZES = [ 4, 8, 5 ]; 
+const GROUP_SIZES = [ 5, 9, 15 ]; 
 const BREAKPOINT_GAP = 1000; 
 
 function getGroupStart(groupIndex){ 
@@ -68,7 +80,7 @@ function createBreakpoint( x, label ){
     gallery.appendChild(bp); 
 } 
 
-function createGallery(){ 
+async function createGallery(){ 
     createBreakpoint(-300, GROUP_NAMES[0]);
     images.forEach((photo,i)=>{ 
         const frame = document.createElement("div"); 
@@ -93,7 +105,8 @@ function createGallery(){
             let y = bands[i % 3] + (Math.random()-0.5)*60; 
             y = Math.max( MARGIN, Math.min( y, maxTop ) ); 
             frame.style.top = `${y}px`; 
-            totalWidth += width + SPACING; updateScrollArea(); 
+            totalWidth += width + SPACING; 
+            updateScrollArea(); 
         }; 
         frame.addEventListener( "click", ()=>openViewer(photo) ); 
     }); 
