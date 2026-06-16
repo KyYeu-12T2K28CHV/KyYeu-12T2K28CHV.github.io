@@ -33,6 +33,7 @@ const images = [
     { file:"/../img/fotoexhi/3-3.jpg", title:"Kỷ niệm 30 năm thành lập trường", date:"25/04/2026", info:"" }, 
     { file:"/../img/fotoexhi/3-2.jpg", title:"Buổi tặng quà cho cô Giang", date:"20/05/2026", info:"" }, 
     { file:"/../img/fotoexhi/3-1.jpg", title:"Chè đậu và khen thưởng", date:"21/05/2026", info:"" }, 
+
     { file:"/../img/fotoexhi/end.jpg", title:"Ở đấy có toán tin", date:"25/05/2026", info:"Ngày chúng mình trưởng thành" },
     { file:"/../img/funcbut/back.png", 
         title:"Quay về thôi chứ ở đây làm gì nữa", 
@@ -84,17 +85,40 @@ function isGroupStart(imageIndex){
 
 async function preloadImages() {
     let loaded = 0;
+
+    const loadingText = document.querySelector("#loadingScreen .loading-text");
+    // hoặc:
+    // const loadingText = document.getElementById("loadingText");
+
     const promises = images.map(photo => {
         return new Promise((resolve, reject) => {
             const img = new Image();
+
             img.onload = () => {
                 loaded++;
+
+                if (loadingText) {
+                    loadingText.textContent =
+                        `Đang tải ảnh... (${loaded}/${images.length})`;
+                }
+
                 resolve({
                     img,
                     ratio: img.naturalWidth / img.naturalHeight
                 });
             };
-            img.onerror = reject;
+
+            img.onerror = () => {
+                loaded++;
+
+                if (loadingText) {
+                    loadingText.textContent =
+                        `Đang tải ảnh... (${loaded}/${images.length})`;
+                }
+
+                reject();
+            };
+
             img.src = photo.file;
         });
     });
@@ -115,67 +139,39 @@ function createBreakpoint( x, label ){
 } 
 
 async function createGallery(preloaded) {
-
     createBreakpoint(-300, GROUP_NAMES[0]);
-
     preloaded.forEach(({img, ratio}, i) => {
-
         const photo = images[i];
-
         const frame = document.createElement("div");
         frame.className = "frame";
-
         const image = document.createElement("img");
         image.src = img.src;
-
         frame.appendChild(image);
         gallery.appendChild(frame);
-
         frames.push(frame);
-
         const width = BASE_HEIGHT * ratio;
-
         frame.style.width = `${width}px`;
         frame.style.height = `${BASE_HEIGHT}px`;
-
         const groupStart = isGroupStart(i);
         if(groupStart !== -1){
             createBreakpoint(
                 totalWidth + BREAKPOINT_GAP / 2,
                 GROUP_NAMES[groupStart]
             );
-
             totalWidth += BREAKPOINT_GAP;
         }
-
-        if(photo.home){
-            totalWidth += 3000; 
-        }
-
+        if(photo.home){ totalWidth += 3000; }
         frame.style.left = `${totalWidth}px`;
-
-        const maxTop =
-            window.innerHeight - BASE_HEIGHT - MARGIN;
-
+        const maxTop = window.innerHeight - BASE_HEIGHT - MARGIN;
         const bands = [
             maxTop * 0.10,
             maxTop * 0.45,
             maxTop * 0.80
         ];
-
-        let y =
-            bands[i % 3] +
-            (Math.random() - 0.5) * 60;
-
-        y = Math.max(
-            MARGIN,
-            Math.min(y, maxTop)
-        );
-
+        let y = bands[i % 3] + (Math.random() - 0.5) * 60;
+        y = Math.max( MARGIN, Math.min(y, maxTop) );
         frame.style.top = `${y}px`;
-
         totalWidth += width + SPACING;
-
         frame.addEventListener("click", () => {
             if(photo.home){
                 window.location.href = "../index.html";
@@ -185,7 +181,6 @@ async function createGallery(preloaded) {
 
         });
     });
-
     updateScrollArea();
     updateGallery();
 }
