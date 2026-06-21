@@ -34,6 +34,7 @@ const images = [
     { file:"../img/fotoexhi/3-2.jpg", title:"Buổi tặng quà cho cô Giang", date:"20/05/2026", info:"" }, 
     { file:"../img/fotoexhi/3-1.jpg", title:"Chè đậu và khen thưởng", date:"21/05/2026", info:"" }, 
 
+    { file:"../img/fotoexhi/end2.jpg", title:"Kỷ yếu", date:"28/04/2026", info:"" }, 
     { file:"../img/fotoexhi/end.jpg", title:"Ở đấy có toán tin", date:"25/05/2026", info:"Ngày chúng mình trưởng thành" },
     { file:"../img/funcbut/back.png", 
         title:"Quay về thôi chứ ở đây làm gì nữa", 
@@ -55,7 +56,7 @@ let totalWidth = 0;
 const BASE_HEIGHT = 500; 
 const SPACING = 200; 
 const MARGIN = 80; 
-const GROUP_SIZES = [ 6, 10, 14, 2 ]; 
+const GROUP_SIZES = [ 6, 10, 14, 3 ]; 
 const BREAKPOINT_GAP = 1000; 
 
 function getGroupStart(groupIndex){ 
