@@ -12,6 +12,7 @@ const images = [
     { file:"../img/fotoexhi/2-1.jpg", title:"Giai điệu tuổi hồng 2024", date:"20/11/2024", info:"" }, 
     { file:"../img/fotoexhi/2-4.jpg", title:"Học sinh thanh lịch Minh - Nga", date:"20/11/2024", info:"" }, 
     { file:"../img/fotoexhi/2-6.jpg", title:"20/11 2024", date:"20/11/2024", info:"" }, 
+    { file:"../img/fotoexhi/2-12.jpg", title:"Sơ kết học kỳ I", date:"20/11/2024", info:"" }, 
     { file:"../img/fotoexhi/2-5.jpg", title:"Đà Lạt 2024", date:"24/12/2025", info:"" }, 
     { file:"../img/fotoexhi/2-3.jpg", title:"Ăn tất niên", date:"23/01/2025", info:"" }, 
     { file:"../img/fotoexhi/2-11.jpg", title:"Ngày phụ nữ Việt Nam", date:"08/03/2025", info:"" }, 
@@ -28,6 +29,7 @@ const images = [
     { file:"../img/fotoexhi/3-7.jpg", title:"Ngày nhà giáo Việt Nam", date:"20/11/2025", info:"" }, 
     { file:"../img/fotoexhi/3-10.jpg", title:"Trải nghiệm nấu ăn", date:"08/12/2025", info:"" }, 
     { file:"../img/fotoexhi/3-5.jpg", title:"Tuyển tin? Tất niên rồi", date:"31/12/2025", info:"Cô Thư đãi chuyên tin và một số bạn chuyên toán uống trà sữa" }, 
+    { file:"../img/fotoexhi/3-15.jpg", title:"Đà Lạt 2026", date:"23/01/2026", info:"VL gay" }, 
     { file:"../img/fotoexhi/3-12.jpg", title:"Ăn tất niên ở nhà cô Giang", date:"11/02/2026", info:"" }, 
     { file:"../img/fotoexhi/3-4.jpg", title:"da. god", date:"18/03/2026", info:"" }, 
     { file:"../img/fotoexhi/3-3.jpg", title:"Kỷ niệm 30 năm thành lập trường", date:"25/04/2026", info:"" }, 
@@ -36,6 +38,9 @@ const images = [
 
     { file:"../img/fotoexhi/end2.jpg", title:"Kỷ yếu", date:"28/04/2026", info:"" }, 
     { file:"../img/fotoexhi/end.jpg", title:"Ở đấy có toán tin", date:"25/05/2026", info:"Ngày chúng mình trưởng thành" },
+    
+    { file:"../img/fotoexhi/4-1.jpg", title:"Họp lớp lần đầu tiên", date:"không/nhớ/2026", info:"Không có tiệc" },
+
     { file:"../img/funcbut/back.png", 
         title:"Quay về thôi chứ ở đây làm gì nữa", 
         date:"25/05/2026", 
@@ -50,13 +55,14 @@ const bg1 = document.querySelector(".bg1");
 const bg2 = document.querySelector(".bg2"); 
 const bg3 = document.querySelector(".bg3"); 
 const bg4 = document.querySelector(".bg4"); 
+const bg5 = document.querySelector(".bg5"); 
 const BACKGROUNDS = [ bg1, bg2, bg3, bg4 ]; 
-const GROUP_NAMES = [ "10 11", "10 11", "11 12", "12 end" ]; 
+const GROUP_NAMES = [ "10 11", "10 11", "11 12", "12 end", "13T2" ]; 
 let totalWidth = 0; 
 const BASE_HEIGHT = 500; 
 const SPACING = 200; 
 const MARGIN = 80; 
-const GROUP_SIZES = [ 6, 10, 14, 3 ]; 
+const GROUP_SIZES = [ 6, 11, 15, 2, 1 ]; 
 const BREAKPOINT_GAP = 1000; 
 
 function getGroupStart(groupIndex){ 
@@ -88,8 +94,6 @@ async function preloadImages() {
     let loaded = 0;
 
     const loadingText = document.querySelector("#loadingScreen .loading-text");
-    // hoặc:
-    // const loadingText = document.getElementById("loadingText");
 
     const promises = images.map(photo => {
         return new Promise((resolve, reject) => {
@@ -147,6 +151,7 @@ async function createGallery(preloaded) {
         frame.className = "frame";
         const image = document.createElement("img");
         image.src = img.src;
+        image.alt = photo.title;
         frame.appendChild(image);
         gallery.appendChild(frame);
         frames.push(frame);
@@ -196,13 +201,7 @@ async function createGallery(preloaded) {
     await createGallery(preloaded);
 
     const loading = document.getElementById("loadingScreen");
-    const wrapper = document.querySelector(".gallery-wrapper");
-
     loading.classList.add("hide");
-
-    setTimeout(() => {
-        wrapper.classList.add("show");
-    }, 200);
 
     setTimeout(() => {
         loading.remove();
@@ -270,6 +269,7 @@ const viewerInfo = document.getElementById( "viewerInfo" );
 
 function openViewer(photo){ 
     viewerImage.src = photo.file; 
+    viewerImage.alt = photo.title;
     viewerTitle.textContent = photo.title; 
     viewerDate.textContent = photo.date; 
     viewerInfo.textContent = photo.info; 

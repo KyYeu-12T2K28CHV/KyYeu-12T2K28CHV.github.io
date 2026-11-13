@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="utf-8">
-<title>Kỷ yếu</title>
-<link rel="stylesheet" href="style.css">
- <link rel="icon" href="../img/funcbut/logo.ico" type="image/x-icon">
-<!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành viên | Kỷ yếu</title>
+    <link rel="icon" href="../img/funcbut/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="funt">
-        <button id="shuffleBtn"><img src="../img/funcbut/shuffle.png" alt="shuffle"></button>
-        <!-- <button id="backBtn"><img src="../img/funcbut/back.png" alt="shuffle"></button> -->
-        <a href="../index.html">
-            <img id="backBtn" src="../img/funcbut/back.png" alt="back">
-        </a>
-</div>
-<div id="board"></div>
-<div id="popup" class="hidden"><div class="box">
-<img id="pimg">
-    <div class="info-panel">
-        <h2 id="pname"></h2>
-         <p>Thông tin sẽ hiển thị tại đây.</p>
-        <button onclick="closePopup()">Đóng</button>
+    <header id="toolbar" class="toolbar">
+        <div class="toolbar-brand">
+            <a class="home-button" href="../index.html" aria-label="Về trang chủ">
+                <img src="../img/funcbut/back.png" alt="">
+            </a>
+            <div class="page-heading">
+                <span class="eyebrow">ALBUM KỶ YẾU</span>
+                <h1>Thành viên</h1>
+                <p id="memberCount" aria-live="polite">35 thành viên</p>
+            </div>
+        </div>
+        <label class="search-box">
+            <span class="sr-only">Tìm thành viên theo tên</span>
+            <input id="memberSearch" type="search" placeholder="Tìm theo tên thành viên..." autocomplete="off">
+            <kbd>/</kbd>
+        </label>
+        <button id="shuffleBtn" type="button">
+            <img src="../img/funcbut/shuffle.png" alt="">
+            <span>Xáo trộn</span>
+        </button>
+    </header>
+
+    <main id="board" aria-label="Danh sách thành viên">
+        <p id="emptyState" hidden>Không tìm thấy thành viên phù hợp.</p>
+    </main>
+
+    <div id="popup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="pname" tabindex="-1">
+        <section class="profile-card">
+            <button id="closePopup" class="close-button" type="button" aria-label="Đóng hồ sơ">×</button>
+            <img id="pimg" alt="">
+            <div class="info-panel">
+                <p class="profile-kicker">HỒ SƠ THÀNH VIÊN</p>
+                <h2 id="pname"></h2>
+                <div class="profile-details">
+                    <p><span>Trường</span><strong id="pschool"></strong></p>
+                    <p><span>Ngành học</span><strong id="pmajor"></strong></p>
+                    <p><span>Ngày sinh</span><strong id="pbirthDate"></strong></p>
+                </div>
+                <div class="popup-navigation">
+                    <button id="prevMember" type="button" aria-label="Thành viên trước">← <span>Trước</span></button>
+                    <span id="popupIndex"></span>
+                    <button id="nextMember" type="button" aria-label="Thành viên tiếp theo"><span>Tiếp</span> →</button>
+                </div>
+            </div>
+        </section>
     </div>
-</div></div>
 
-
-<script src="script.js"></script>
-</body></html>
+    <script src="script.js"></script>
+</body>
+</html>
