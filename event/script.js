@@ -40,6 +40,7 @@ const images = [
     { file:"../img/fotoexhi/end.jpg", title:"Ở đấy có toán tin", date:"25/05/2026", info:"Ngày chúng mình trưởng thành" },
     
     { file:"../img/fotoexhi/4-1.jpg", title:"Họp lớp lần đầu tiên", date:"không/nhớ/2026", info:"Không có tiệc" },
+    { file:"../img/fotoexhi/4-2.jpg", title:"20/11 của lớp 13T2", date:"20/11/2026", info:"" },
 
     { file:"../img/funcbut/back.png", 
         title:"Quay về thôi chứ ở đây làm gì nữa", 
