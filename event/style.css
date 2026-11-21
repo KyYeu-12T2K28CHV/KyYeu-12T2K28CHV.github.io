@@ -58,6 +58,10 @@ body::before {
     background-image: url("../img/fotoexhi/bg4.png");
 }
 
+.bg5 {
+    background-image: url("../img/fotoexhi/bg5.png");
+}
+
 .gallery {
     position: fixed;
     z-index: 10;

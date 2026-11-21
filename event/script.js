@@ -25,7 +25,7 @@ const images = [
     { file:"../img/fotoexhi/3-8.jpg", title:"Đi Picnic", date:"16/10/2025", info:"" }, 
     { file:"../img/fotoexhi/3-9.jpg", title:"20/10 cuối cùng", date:"20/10/2025", info:"" }, 
     { file:"../img/fotoexhi/3-13.jpg", title:"Học sinh thanh lịch Đại - Ngân", date:"20/11/2025", info:"" },
-    { file:"../img/fotoexhi/3-6.jpg", title:"Giai điệu tuổi hồng", date:"20/11/2025", info:"" }, 
+    { file:"../img/fotoexhi/3-6.jpg", title:"Giai điệu tuổi hồng 2025", date:"20/11/2025", info:"" }, 
     { file:"../img/fotoexhi/3-7.jpg", title:"Ngày nhà giáo Việt Nam", date:"20/11/2025", info:"" }, 
     { file:"../img/fotoexhi/3-10.jpg", title:"Trải nghiệm nấu ăn", date:"08/12/2025", info:"" }, 
     { file:"../img/fotoexhi/3-5.jpg", title:"Tuyển tin? Tất niên rồi", date:"31/12/2025", info:"Cô Thư đãi chuyên tin và một số bạn chuyên toán uống trà sữa" }, 
@@ -40,7 +40,8 @@ const images = [
     { file:"../img/fotoexhi/end.jpg", title:"Ở đấy có toán tin", date:"25/05/2026", info:"Ngày chúng mình trưởng thành" },
     
     { file:"../img/fotoexhi/4-1.jpg", title:"Họp lớp lần đầu tiên", date:"không/nhớ/2026", info:"Không có tiệc" },
-    { file:"../img/fotoexhi/4-2.jpg", title:"20/11 của lớp 13T2", date:"20/11/2026", info:"" },
+    { file:"../img/fotoexhi/4-2.jpg", title:"20/11 2026", date:"20/11/2026", info:"" },
+    { file:"../img/fotoexhi/4-3.jpg", title:"Giai điệu tuổi hồng 2026", date:"21/11/2026", info:"nhưng không có tiết mục của 13T2" },
 
     { file:"../img/funcbut/back.png", 
         title:"Quay về thôi chứ ở đây làm gì nữa", 
@@ -57,13 +58,13 @@ const bg2 = document.querySelector(".bg2");
 const bg3 = document.querySelector(".bg3"); 
 const bg4 = document.querySelector(".bg4"); 
 const bg5 = document.querySelector(".bg5"); 
-const BACKGROUNDS = [ bg1, bg2, bg3, bg4 ]; 
-const GROUP_NAMES = [ "10 11", "10 11", "11 12", "12 end", "13T2" ]; 
+const BACKGROUNDS = [ bg1, bg2, bg3, bg4, bg5 ]; 
+const GROUP_NAMES = [ "2023 - 2024", "2024 - 2025", "2025 - 2026", "2026 - end", "2026 - x" ]; 
 let totalWidth = 0; 
 const BASE_HEIGHT = 500; 
 const SPACING = 200; 
 const MARGIN = 80; 
-const GROUP_SIZES = [ 6, 11, 15, 2, 1 ]; 
+const GROUP_SIZES = [ 6, 11, 15, 5, 1 ]; 
 const BREAKPOINT_GAP = 1000; 
 
 function getGroupStart(groupIndex){ 
